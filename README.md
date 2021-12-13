@@ -1,5 +1,8 @@
 # Learning Bash Scripting
 
+# Wiki
+
+* [lyes-s/learning-bash-scripting/wiki](https://github.com/lyes-s/learning-bash-scripting/wiki)
 
 # Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
