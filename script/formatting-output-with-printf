@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+declare -r aLabel="A Label"
+declare -r bLabel="B Label"
+declare -r -i aDigit=123
+declare -r -i bDigit=456
+
+a=$((2 + 2))
+
+printf "The result of 2 + 2 is %d \n" ${a}
+
+echo '----10-----| --5--'
+
+echo "Right-aligned text and digits"
+printf "%10s : %5d\n" "${aLabel}" ${aDigit} "${bLabel}" ${bDigit}
+
+echo
+
+echo "Left-aligned text, right-aligned digits"
+printf "%-10s : %5d\n" "${aLabel}" ${aDigit} "${bLabel}" ${bDigit}
+
+echo
+
+echo "Left-aligned text and digits"
+printf "%-10s : %-5d\n" "${aLabel}" ${aDigit} "${bLabel}" ${bDigit}
+
+echo
+
+echo "Left-aligned text, right-aligned and padded digits"
+printf "%-10s : %05d\n" "${aLabel}" ${aDigit} "${bLabel}" ${bDigit}
+
+echo "----10-----| --5--"
+
+echo
+printf "%(%Y-%m-%d %H:%M:%S)T\n" $(date +%s)
