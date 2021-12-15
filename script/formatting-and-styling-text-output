@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+declare -r tab="\t"
+declare -r newLine="\n"
+declare -r ding="\a"
+declare -r ulinered="\033[4;31;40m"
+declare -r red="\033[31;40m"
+declare -r none="\033[0m"
+
+echo -e "Name${tab}${tab}Number"; echo -e "Mitsuke${tab}${tab}123";
+
+echo
+
+echo -e "This text${newLine}breaks over${newLine}three lines"
+
+echo
+
+# Ring the terminal bell
+echo -e "Ding"${ding}
+
+echo
+
+echo -e ${ulinered}"ERROR:"${none}${red}" Something went wrong."${none}${ding}
