@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo -e "Interpretation\n\t0 : true\n\t1 : false"
+
+echo "Begin"
+
+[ -d /usr/bin/bash ]; echo -e "\tIs /usr/bin/bash a directory ? " $?
+
+[ -d /usr/bin/ ]; echo -e "\tIs /usr/bin a directory ? " $?
+
+[ "cat" == "dog" ]; echo -e "\tIs cat == dog ? " $?
+
+[ "cat" == "cat" ]; echo -e "\tIs cat == cat ? " $?
+
+[ 4 -lt 5 ]; echo -e "\tIs 4 less than 5 ? " $?
+
+[ 4 -lt 3 ]; echo -e "\tIs 4 less than 3 ? " $?
+
+[ ! 4 -lt 3 ]; echo -e "\tIs 4 greater or equal than 3 ? " $?
+
+echo "End"
