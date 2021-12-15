@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+declare -r tab="\t"
+declare -r newLine="\n"
+
+echo -e "Interpretation${newLine}${tab}0 : true${newLine}${tab}1 : false"
+
+echo "Begin"
+
+[[ -d ~ && -a /usr/bin/ ]]; echo -e ${tab}"Is Tilde a directory and /usr/bin/ exists ? " $?
+
+[[ "cat" =~ c.* ]]; echo -e ${tab}"Is 'cat' matches the pattern : c.* ? " $?
+
+echo "End"
