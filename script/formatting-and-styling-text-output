@@ -3,7 +3,7 @@
 declare -r tab="\t"
 declare -r newLine="\n"
 declare -r ding="\a"
-declare -r ulinered="\033[4;31;40m"
+declare -r uLinered="\033[4;31;40m"
 declare -r red="\033[31;40m"
 declare -r none="\033[0m"
 
@@ -20,4 +20,4 @@ echo -e "Ding"${ding}
 
 echo
 
-echo -e ${ulinered}"ERROR:"${none}${red}" Something went wrong."${none}${ding}
+echo -e ${uLinered}"ERROR:"${none}${red}" Something went wrong."${none}${ding}
