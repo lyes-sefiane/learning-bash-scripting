@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+declare -i a=3
+a=${a}+3
+echo "The value of a is : ${a}"
+
+a+=3
+echo "The value of a now is : ${a}"
