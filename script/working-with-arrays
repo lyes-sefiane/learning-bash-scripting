@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+
+declare -a snacks=("apple" "banana" "orange")
+declare -A office
+
+echo "Snacks at Index 2 is : "${snacks[2]}
+echo
+# Add a value in the array
+# Make sure to add parenthesis
+# Else it will be added at index 0
+snacks+=("mango")
+echo "Snacks array : "${snacks[@]}
+
+echo
+# No need quotes in city
+office[city]="San Francisco"
+# Quotes required
+office["building name"]="HQ West"
+echo ${office["building name"]} is in ${office[city]}
+
+
