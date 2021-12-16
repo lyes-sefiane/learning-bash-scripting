@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+declare -a numbers=(1 2 3)
+declare -a fruits=( "apple" "banana" "cherry" )
+
+# For Each Element in Array
+for i in ${numbers[@]}
+do
+  echo ${i}
+done
+
+# Iterate over Array Items using For Loop and Index
+for (( i=0; i < ${#fruits[@]}; i++ ))
+do
+  echo ${fruits[${i}]}
+done
