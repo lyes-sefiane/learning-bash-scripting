@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Compose a script to show some system information
+# Use some standards tools, like df, free, or others
+# Use awk or sed to extract text from output, if you know them
+# Use formatted text
+# Set aside 20 minutes for this task
+
+declare -r freespace=$(df -h / | awk 'NR==2 {print $4}')
+declare -r freemem=$(free -h | awk 'NR==2 {print $4}')
+declare greentext="\033[0;32m"
+declare bold="\033[1m"
+declare normal="\033[0m"
+declare tab="\t"
+declare newLine="\n"
+
+printf -v logdate "%(%Y-%m-%d)T"
+
+echo -e ${bold}"Quick system report for "${greentext}${HOSTNAME}${normal}
+printf ${tab}"Kernel Release:${tab}%s${newLine}" $(uname -r)
+printf ${tab}"Bash Version:${tab}%s${newLine}" ${BASH_VERSION}
+printf ${tab}"Free Storage:${tab}%s${newLine}" ${freespace}
+printf ${tab}"Free Memory:${tab}%s${newLine}" ${freemem}
+printf ${tab}"Files in pwd:${tab}%s${newLine}" $(ls | wc -l)
+printf ${tab}"Generated on:${tab}%s${newLine}" ${logdate}
