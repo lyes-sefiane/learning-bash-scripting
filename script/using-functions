@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+greeting(){
+  echo "Hi there,  $1. What a nice $2"
+}
+
+numberthing(){
+  local i=1
+  for f in $@
+  do
+    echo "$i: $f"
+    (( i++ ))
+  done
+  echo "This counting was brought to you by $FUNCNAME."
+}
+
+echo "And now, a greeting ..."
+greeting Mitsuke Morning
+
+echo
+
+numberthing $(ls /)
+
+
+
