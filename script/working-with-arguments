@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+arrayToString(){
+  local arrayAsString;
+  for i in $@
+  do
+    arrayAsString+=${i}" "
+  done
+  echo received argument : ${arrayAsString}
+}
+
+echo "The $0 script got $# arguments"
+
+arrayToString $"$@"
