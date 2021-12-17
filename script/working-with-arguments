@@ -6,9 +6,9 @@ arrayToString(){
   do
     arrayAsString+=${i}" "
   done
-  echo received argument : ${arrayAsString}
+  echo received argument(s) : ${arrayAsString}
 }
 
-echo "The $0 script got $# arguments"
+echo "The $0 script got $# argument(s)"
 
 arrayToString $"$@"
