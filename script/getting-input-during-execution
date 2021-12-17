@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "What is your username?"
+read username
+echo "What is your password?"
+read -s password
+
+echo "username: $username, password: $password"
+
+echo "Which Animal"
+select animal in "cat" "dog" "quit"
+do
+  case ${animal} in
+    cat) echo "Cats like to sleep.";;
+    dog) echo "Dogs like to play catch.";;
+    quit) break;;
+    *) echo "I'm not sure what that is."
+  esac
+done
