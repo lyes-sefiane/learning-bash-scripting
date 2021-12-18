@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Checking the number of arguments
+if (( $# < 3 ))
+then
+  echo "This command requires three arguments."
+  echo "username, userid and favorite number."
+else
+  echo "username: $1"
+  echo "userid: $2"
+  echo "favorite number: $3"
+fi
+
+# Checking the empty value
+read -p "Favorite animal? " favorite
+while [[ -z ${favorite} ]]
+do
+  read -p "I need an answer !! " favorite
+done
+
+# Matching Check
+echo "$favorite was selected."
+
+read -p "What year? [nnnn] " year
+until [[ $year =~ [0-9]{4} ]]
+do
+  read -p "A year, please ! [nnnn] " year
+done
+echo "Selected year: $year"
