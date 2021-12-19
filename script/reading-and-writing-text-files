@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 
+declare -a passarray
+
+# Write to file
 for i in {0..5}
 do
   echo "This is line $i" >> ~/textfile.txt
 done
 
+# Read from file with wile
 while read -r f
 do
   echo "I read a line and it says: $f"
 done < ~/textfile.txt
+
+# Read from file and store in array
+mapfile passarray < "${1}"
+
+echo "Array Length : "${#passarray[@]}
+echo "Array Contents : "${passarray[@]}
+
