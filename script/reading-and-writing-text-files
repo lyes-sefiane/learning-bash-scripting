@@ -5,7 +5,7 @@ do
   echo "This is line $i" >> ~/textfile.txt
 done
 
-while read f
+while read -r f
 do
   echo "I read a line and it says: $f"
 done < ~/textfile.txt
